@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { useFormik } from "formik";
 import {
   Box,
@@ -15,28 +15,21 @@ import {
 import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
-import {useAlertContext} from "../context/alertContext";
+import { useAlertContext } from "../context/alertContext";
 
 const LandingSection = () => {
-  const {isLoading, response, submit} = useSubmit();
+  const { isLoading, response, submit } = useSubmit();
   const { onOpen } = useAlertContext();
 
   const formik = useFormik({
     initialValues: {
       firstName: '',
       email: '',
-      type: '', 
+      type: '',
       comment: '',
     },
-    onSubmit: (values) => {
-      try {
-        submit('url', values);
-        if(response) {
-          onOpen(response.message);
-        }
-      } catch (error) {
-        onOpen(error.message);
-      }
+    onSubmit: async (values) => {
+      await submit("url", values);
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required('Required'),
@@ -45,6 +38,18 @@ const LandingSection = () => {
       comment: Yup.string().min(25, 'Must be at least 25 characters').required('Required')
     }),
   });
+
+  // Use useEffect to handle changes in response object
+  useEffect(() => {
+    if (response) {
+      onOpen(response.type, response.message);
+      
+      if (response.type === 'success') {
+        formik.resetForm();
+      }
+    }
+  }, [response, onOpen, formik]);
+
 
   return (
     <FullScreenSection
@@ -99,7 +104,7 @@ const LandingSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="purple" width="full">
+              <Button type="submit" colorScheme="purple" width="full" isLoading={isLoading}>
                 Submit
               </Button>
             </VStack>
