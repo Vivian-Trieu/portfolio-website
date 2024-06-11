@@ -33,23 +33,24 @@ const socials = [
 ];
 
 const Header = () => {
-  const [showHeader, setShowHeader] = useState(true);
-  const lastScrollY = useRef(0);
+  const headerRef = useRef(null);
 
   useEffect(() => {
+    let prevScrollPos = window.scrollY;
+
     const handleScroll = () => {
-      const currentScrollY = window.scrollY;
+      const currentScrollPos = window.scrollY;
+      const headerElement = headerRef.current;
 
-      if (currentScrollY > lastScrollY.current) {
-        // Do not show if scrolling down
-        setShowHeader(false);
-      } else {
-        // Show if scrolling up
-        setShowHeader(true);
+      if (!headerElement) {
+        return;
       }
-
-      // Update scroll position
-      lastScrollY.current = currentScrollY;
+      if (prevScrollPos > currentScrollPos) {
+        headerElement.style.transform = "translateY(0)";
+      } else {
+        headerElement.style.transform = "translateY(-200px)";
+      }
+      prevScrollPos = currentScrollPos;
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -76,11 +77,12 @@ const Header = () => {
       top={0}
       left={0}
       right={0}
-      transform={showHeader ? "translateY(0)" : "translateY(-200px)"}
+      translateY={0}
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
       backgroundColor="#18181b"
+      ref={headerRef}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
@@ -100,8 +102,8 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="/#projects" onClick={handleClick("projects")}>Projects</a>
-              <a href="/#contact-me" onClick={handleClick("contactme")}>Contact Me</a>
+              <a href="#projects" onClick={handleClick("projects")}>Projects</a>
+              <a href="#contact-me" onClick={handleClick("contactme")}>Contact Me</a>
             </HStack>
           </nav>
         </HStack>
