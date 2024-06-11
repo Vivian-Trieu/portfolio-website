@@ -32,7 +32,7 @@ const Card = ({ title, description, imageSrc }) => {
         >
           {title}
         </Heading>
-        <Text>
+        <Text color="#64748b" fontSize="lg">
           {description}
         </Text>
         <Button
@@ -45,7 +45,7 @@ const Card = ({ title, description, imageSrc }) => {
 
       </VStack>
     </Box>
-  )
+  );
 
 };
 
