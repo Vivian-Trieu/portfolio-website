@@ -23,19 +23,19 @@ const LandingSection = () => {
 
   const formik = useFormik({
     initialValues: {
-      firstName: '',
-      email: '',
-      type: '',
-      comment: '',
+      firstName: "",
+      email: "",
+      type: "hireMe",
+      comment: "",
     },
     onSubmit: async (values) => {
       await submit("url", values);
     },
     validationSchema: Yup.object({
-      firstName: Yup.string().required('Required'),
-      email: Yup.string().email('Invalid email address').required('Required'),
+      firstName: Yup.string().required("Required"),
+      email: Yup.string().email("Invalid email address").required("Required"),
       type: Yup.string().notRequired(),
-      comment: Yup.string().min(25, 'Must be at least 25 characters').required('Required')
+      comment: Yup.string().min(25, "Must be at least 25 characters").required("Required")
     }),
   });
 
@@ -43,13 +43,11 @@ const LandingSection = () => {
   useEffect(() => {
     if (response) {
       onOpen(response.type, response.message);
-      
       if (response.type === 'success') {
         formik.resetForm();
       }
     }
-  }, [response, onOpen, formik]);
-
+  }, [response]);
 
   return (
     <FullScreenSection
@@ -86,7 +84,7 @@ const LandingSection = () => {
               </FormControl>
               <FormControl>
                 <FormLabel htmlFor="type">Type of enquiry</FormLabel>
-                <Select id="type" name="type" {...formik.getFieldProps('type')}>
+                <Select id="type" name="type" {...formik.getFieldProps("type")}>
                   <option value="hireMe">Freelance project proposal</option>
                   <option value="openSource">
                     Open source consultancy session

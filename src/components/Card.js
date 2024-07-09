@@ -13,6 +13,7 @@ const Card = ({ title, description, imageSrc }) => {
       boxShadow="md"
       borderRadius='xl'
       bg="white"
+      cursor="pointer"
     >
       <Image
         boxFit="cover"
