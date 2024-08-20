@@ -7,28 +7,21 @@ import {
   faMedium,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack } from "@chakra-ui/react";
+import { Box, HStack, Button } from "@chakra-ui/react";
+import resumePDF from '../assets/resume.pdf';
 
 const socials = [
   {
     icon: faEnvelope,
-    url: "mailto: hello@example.com",
+    url: "mailto: vivian.dtrieu@gmail.com",
   },
   {
     icon: faGithub,
-    url: "https://github.com",
+    url: "https://github.com/Vivian-Trieu",
   },
   {
     icon: faLinkedin,
-    url: "https://www.linkedin.com",
-  },
-  {
-    icon: faMedium,
-    url: "https://medium.com",
-  },
-  {
-    icon: faStackOverflow,
-    url: "https://stackoverflow.com",
+    url: "https://www.linkedin.com/in/vivian-dtrieu/",
   },
 ];
 
@@ -81,7 +74,7 @@ const Header = () => {
       transitionProperty="transform"
       transitionDuration=".3s"
       transitionTimingFunction="ease-in-out"
-      backgroundColor="#18181b"
+      // backgroundColor=""
       ref={headerRef}
     >
       <Box color="white" maxWidth="1280px" margin="0 auto">
@@ -102,8 +95,19 @@ const Header = () => {
           </nav>
           <nav>
             <HStack spacing={8}>
-              <a href="#projects" onClick={handleClick("projects")}>Projects</a>
-              <a href="#contact-me" onClick={handleClick("contactme")}>Contact Me</a>
+              <a href="#projects" onClick={handleClick("projects")}>projects</a>
+              <a href="#contact-me" onClick={handleClick("contactme")}>contact</a>
+              <Button
+                as="a"
+                href={resumePDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                bg="black"
+                color="white"
+                _hover={{ bg: "#FFABC9" }}
+              >
+                resume
+              </Button>
             </HStack>
           </nav>
         </HStack>
