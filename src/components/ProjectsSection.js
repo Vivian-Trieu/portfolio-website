@@ -17,7 +17,7 @@ const ProjectsSection = () => {
         <Heading
           as="h1"
           id="projects-section"
-          color="black"
+          color="#333"
         >
           featured projects
         </Heading>

@@ -13,7 +13,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
       maxW="2xl"
       borderRadius='xl'
       bg="white"
-      cursor="pointer"
+    // cursor="pointer"
     >
       <Image
         objectFit="cover"
@@ -51,6 +51,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
         <Heading
           as='h3'
           size="lg"
+          color="#333"
         >
           {title}
         </Heading>
@@ -65,8 +66,12 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
           ))}
         </Wrap>
         <HStack spacing={6} pt={5}>
-          <Link href={codeLink} isExternal>
+          {codeLink && (
             <Button
+              as="a"
+              href={codeLink}
+              target="_blank"
+              rel="noopener noreferrer"
               color="#FFABC9"
               variant="link"
               leftIcon={<FontAwesomeIcon icon={faCode} size="sm" />}
@@ -79,9 +84,13 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
             >
               Code
             </Button>
-          </Link>
-          <Link href={figmaLink} isExternal>
+          )}
+          {figmaLink && (
             <Button
+              as="a"
+              href={figmaLink}
+              target="_blank"
+              rel="noopener noreferrer"
               color="#FFABC9"
               variant="link"
               leftIcon={<FontAwesomeIcon icon={faFigma} size="sm" />}
@@ -94,7 +103,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
             >
               Figma
             </Button>
-          </Link>
+          )}
         </HStack>
       </VStack>
     </Box>
