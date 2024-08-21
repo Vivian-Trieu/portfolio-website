@@ -38,8 +38,14 @@ const Header = () => {
       if (!headerElement) {
         return;
       }
-      if (prevScrollPos > currentScrollPos) {
+
+      if (currentScrollPos === 0) {
+        // At the top of the page
         headerElement.style.transform = "translateY(0)";
+        headerElement.style.backgroundColor = "transparent";
+      } else if (prevScrollPos > currentScrollPos) {
+        headerElement.style.transform = "translateY(0)";
+        headerElement.style.backgroundColor = "rgba(51, 51, 51, 0.5)";
       } else {
         headerElement.style.transform = "translateY(-200px)";
       }
@@ -71,13 +77,13 @@ const Header = () => {
       left={0}
       right={0}
       translateY={0}
-      transitionProperty="transform"
-      transitionDuration=".3s"
-      transitionTimingFunction="ease-in-out"
+      transition="transform 0.3s ease-in-out, background-color 0.3s ease-in-out"
+      backgroundColor="rgba(0, 0, 0, 0)"
       // backgroundColor=""
       ref={headerRef}
+      zIndex={3}
     >
-      <Box color="white" maxWidth="1280px" margin="0 auto">
+      <Box color="white" maxWidth="100%" margin="0 auto">
         <HStack
           px={16}
           py={4}
@@ -102,7 +108,7 @@ const Header = () => {
                 href={resumePDF}
                 target="_blank"
                 rel="noopener noreferrer"
-                bg="black"
+                bg="#333333"
                 color="white"
                 _hover={{ bg: "#FFABC9" }}
               >
