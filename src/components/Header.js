@@ -110,7 +110,7 @@ const Header = () => {
                 rel="noopener noreferrer"
                 bg="#333333"
                 color="white"
-                _hover={{ bg: "#FFABC9" }}
+                _hover={{ bg: "#C3A7E8" }}
               >
                 resume
               </Button>
