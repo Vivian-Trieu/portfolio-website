@@ -1,58 +1,45 @@
 import React from "react";
 import FullScreenSection from "./FullScreenSection";
-import { Box, Heading } from "@chakra-ui/react";
+import { Box, Button, Heading, HStack, Spacer } from "@chakra-ui/react";
 import Card from "./Card";
-
-const projects = [
-  {
-    title: "React Space",
-    description:
-      "Handy tool belt to create amazing AR components in a React app, with redux integration via middleware️",
-    getImageSrc: () => require("../assets/photo1.jpg"),
-  },
-  {
-    title: "React Infinite Scroll",
-    description:
-      "A scrollable bottom sheet with virtualisation support, native animations at 60 FPS and fully implemented in JS land 🔥️",
-    getImageSrc: () => require("../assets/photo2.jpg"),
-  },
-  {
-    title: "Photo Gallery",
-    description:
-      "A One-stop shop for photographers to share and monetize their photos, allowing them to have a second source of income",
-    getImageSrc: () => require("../assets/photo3.jpg"),
-  },
-  {
-    title: "Event planner",
-    description:
-      "A mobile application for leisure seekers to discover unique events and activities in their city with a few taps",
-    getImageSrc: () => require("../assets/photo4.jpg"),
-  },
-];
+import projects from "../ProjectData";
 
 const ProjectsSection = () => {
   return (
     <FullScreenSection
-      backgroundColor="#14532d"
+      backgroundColor="white"
       isDarkBackground
-      p={8}
-      alignItems="flex-start"
-      spacing={8}
+      p={10}
+      //alignItems="flex-start"
+      spacing={20}
     >
-      <Heading as="h1" id="projects-section">
-        Featured Projects
-      </Heading>
+      <HStack justifyContent="space-between" width="100%" alignItems="center" mb={8}>
+        <Heading
+          as="h1"
+          id="projects-section"
+          color="black"
+        >
+          featured projects
+        </Heading>
+        <Button bg="#FFABC9" _hover={{ bg: "#C3A7E8" }}>view all</Button>
+      </HStack>
       <Box
         display="grid"
-        gridTemplateColumns="repeat(2,minmax(0,1fr))"
+        gridTemplateColumns="repeat(3,minmax(0,1fr))"
         gridGap={8}
       >
         {projects.map((project) => (
           <Card
             key={project.title}
+            category={project.category}
+            startDate={project.startDate}
+            endDate={project.endDate}
             title={project.title}
             description={project.description}
+            skills={project.skills}
             imageSrc={project.getImageSrc()}
+            codeLink={project.codeLink}
+            figmaLink={project.figmaLink}
           />
         ))}
       </Box>
