@@ -16,6 +16,7 @@ import * as Yup from 'yup';
 import FullScreenSection from "./FullScreenSection";
 import useSubmit from "../hooks/useSubmit";
 import { useAlertContext } from "../context/alertContext";
+import background from "../assets/noisy-gradients-bg-rotated.png";
 
 const LandingSection = () => {
   const { isLoading, response, submit } = useSubmit();
@@ -52,7 +53,11 @@ const LandingSection = () => {
   return (
     <FullScreenSection
       isDarkBackground
-      backgroundColor="#512DA8"
+      backgroundColor="#FFABC9"
+      backgroundImage={background}
+      backgroundSize="cover"
+      backgroundRepeat="no-repeat"
+      backgroundPosition="center"
       py={16}
       spacing={8}
     >
@@ -102,7 +107,14 @@ const LandingSection = () => {
                 />
                 <FormErrorMessage>{formik.errors.comment}</FormErrorMessage>
               </FormControl>
-              <Button type="submit" colorScheme="purple" width="full" isLoading={isLoading}>
+              <Button 
+                type="submit" 
+                bg="black"
+                color="white"
+                _hover={{ bg: "#FFABC9" }} 
+                width="full" 
+                isLoading={isLoading}
+              >
                 Submit
               </Button>
             </VStack>
