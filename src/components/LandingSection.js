@@ -26,16 +26,20 @@ const LandingSection = () => (
     <Box position="relative">
       <Image src={sparkle} position="absolute" left="-90px" bottom="70px" transform="scaleY(-1)" boxSize="80px"/>
       <Image src={sparkle} position="absolute" right="560px" top="70px" transform="scaleX(-1)" boxSize="80px"/>
-      <Image src={sparkle} position="absolute" right="80px" bottom="10px" transform="scaleY(-1) scaleX(-1)" boxSize="80px"/>
+      <Image src={sparkle} position="absolute" right="30px" bottom="-10px" transform="scaleY(-1) scaleX(-1)" boxSize="80px"/>
 
-      <HStack spacing={15} padding={10}>
+      <HStack
+          spacing={{base: "0", sm: "28"}}
+          padding={10}
+          flexDirection={{base: "column", sm: "row"}}
+        >
         <VStack spacing={6} alignItems="flex-start">
-          <Text as="i" fontSize="xl" >{title}</Text>
-          <Heading as="h1" size="3xl" >{greeting}</Heading>
-          <Text fontSize="2xl">{bio}</Text>
+          <Text as="i" fontSize={{base: "md", md:"xl"}}>{title}</Text>
+          <Heading as="h1" size={{base: "3xl", md:"3xl"}} >{greeting}</Heading>
+          <Text fontSize={{base: "xl", md:"2xl"}}>{bio}</Text>
         </VStack>
         <Image
-          size="xl"
+          width={{base: "md", md: "lg", '2xl': "xl"}}
           src={portrait}
         />
       </HStack>
