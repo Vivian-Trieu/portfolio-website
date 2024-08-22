@@ -74,7 +74,7 @@ const Header = () => {
       });
       //onToggle();
     }
-    
+
   };
 
   return (
@@ -88,8 +88,10 @@ const Header = () => {
       backgroundColor="rgba(0, 0, 0, 0)"
       ref={headerRef}
       zIndex={3}
+      width="100vw"
+      overflow="auto"
     >
-      <Box color="white" maxWidth="1280px" margin="0 auto">
+      <Box color="white" maxWidth="1280px" margin="0 0">
         <HStack
           px={{ base: 5, md: 16 }}
           py={4}
