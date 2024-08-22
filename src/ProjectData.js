@@ -41,7 +41,7 @@ const projects = [
         endDate: "Jul 2024",
         title: "Portfolio Website",
         description:
-            "Website for fictional restaurant Little Lemon as a capstone project for Coursera's Meta Front-end Developer Certification",
+            "My portfolio showcasing my work and design skills—you're looking at it right now!",
         skills: ["ReactJS", "CSS", "JSX", "Figma", "Chakra UI", "Formik"],
         codeLink: "https://github.com/Vivian-Trieu/portfolio-website",
         figmaLink: "https://www.figma.com/design/p4Gew4hQWS5noHLTJqa1fQ/Portfolio-Wireframe?node-id=0-1&t=Tqpr486MEPKA4Qhq-1",
