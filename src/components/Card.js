@@ -10,7 +10,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
   // Feel free to import other UI components from Chakra UI if you wish to.
   return (
     <Box
-      maxW="2xl"
+      maxW="sm"
       borderRadius='xl'
       bg="white"
     // cursor="pointer"
