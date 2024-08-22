@@ -25,8 +25,8 @@ const projects = [
     },
     {
         category: "Website",
-        startDate: "Jul 2024",
-        endDate: "Aug 2024",
+        startDate: "May 2024",
+        endDate: "Jul 2024",
         title: "Little Lemon",
         description:
             "Website for fictional restaurant Little Lemon as a capstone project for Coursera's Meta Front-end Developer Certification",
@@ -37,8 +37,8 @@ const projects = [
     },
     {
         category: "Website",
-        startDate: "May 2024",
-        endDate: "Jul 2024",
+        startDate: "Jul 2024",
+        endDate: "Aug 2024",
         title: "Portfolio Website",
         description:
             "My portfolio showcasing my work and design skills—you're looking at it right now!",
