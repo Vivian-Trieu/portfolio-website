@@ -51,13 +51,13 @@ const LandingSection = () => (
         boxSize="80px"
         display={{ base: "none", lg: "block" }}
       />
-
-      <HStack
+    </Box>
+    <HStack
           spacing={{base: "0", md: "15"}}
           padding={{base: "12", md: "20"}}
           flexDirection={{base: "column", lg: "row"}}
         >
-        <VStack spacing={6} alignItems="flex-start">
+        <VStack padding={5} spacing={6} alignItems="flex-start" pt={20}>
           <Text as="i" fontSize={{base: "md", md:"xl"}}>{title}</Text>
           <Heading as="h1" size={{base: "3xl", md:"3xl"}} >{greeting}</Heading>
           <Text fontSize={{base: "xl", md:"2xl"}}>{bio}</Text>
@@ -67,7 +67,6 @@ const LandingSection = () => (
           src={portrait}
         />
       </HStack>
-    </Box>
 
   </FullScreenSection>
 );
