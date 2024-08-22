@@ -55,6 +55,7 @@ const LandingSection = () => (
       <HStack
         spacing={{ base: "0", md: "15" }}
         padding={{ base: "6", md: "10" }}
+        pb={{ base: "10", lg: "0"}}
         flexDirection={{ base: "column", lg: "row" }}
       >
         <VStack padding={5} spacing={6} alignItems="flex-start" pt={20}>
