@@ -59,18 +59,7 @@ const projects = [
         figmaLink: "https://www.figma.com/design/90g4iXwB0lZLTDFs1YHZ7g/ResuMate-UI?node-id=0-1&t=qKfMgr0ObVh2gCSH-1",
         getImageSrc: () => require("./assets/resumate.png"),
     },
-    {
-        category: "Desktop App",
-        startDate: "Feb 2023",
-        endDate: "May 2023",
-        title: "Restaurant Food Delivery",
-        description:
-            "A restaurant food delivery subsystem using a SQL database to manage ordering, management, and delivery processes in one app",
-        skills: ["JavaFx", "CSS", "SQL"],
-        codeLink: "https://github.com/EvinMenendezVargas/CS3560-01-6-Restaurant-Food-Delivery-System",
-        figmaLink: "",
-        getImageSrc: () => require("./assets/restaurantdelivery.png"),
-    },
+
 ];
 
 export default projects;
