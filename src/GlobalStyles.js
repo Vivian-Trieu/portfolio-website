@@ -7,6 +7,7 @@ const GlobalStyles = () => (
         styles={`
             body {
                 cursor: url(${cursor}), auto;
+                overflow-x: hidden;
             }
             a, button {
                 cursor: url(${hoverCursor}), pointer;
