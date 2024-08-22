@@ -29,9 +29,9 @@ const LandingSection = () => (
       <Image src={sparkle} position="absolute" right="30px" bottom="-10px" transform="scaleY(-1) scaleX(-1)" boxSize="80px"/>
 
       <HStack
-          spacing={{base: "0", sm: "28"}}
-          padding={10}
-          flexDirection={{base: "column", sm: "row"}}
+          spacing={{base: "0", md: "28"}}
+          padding={{base: 12, md: 20}}
+          flexDirection={{base: "column", md: "row"}}
         >
         <VStack spacing={6} alignItems="flex-start">
           <Text as="i" fontSize={{base: "md", md:"xl"}}>{title}</Text>

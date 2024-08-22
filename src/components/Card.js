@@ -1,4 +1,4 @@
-import { Badge, Box, Button, Heading, HStack, Image, Text, VStack, Wrap, Link } from "@chakra-ui/react";
+import { Tag, Box, Button, Heading, HStack, Image, Text, VStack, Wrap } from "@chakra-ui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faFigma } from "@fortawesome/free-brands-svg-icons";
@@ -60,9 +60,9 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
         </Text>
         <Wrap spacing={2}>
           {skills.map((skill, index) => (
-            <Badge key={index} bg="#ECECEC" color="#969696" borderRadius={20} px={3} py={2}>
+            <Tag key={index} bg="#ECECEC" color="#969696" borderRadius={20} px={3} py={2}>
               {skill}
-            </Badge>
+            </Tag>
           ))}
         </Wrap>
         <HStack spacing={6} pt={5}>

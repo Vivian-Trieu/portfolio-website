@@ -1,13 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
+import { faEnvelope, faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import {
   faGithub,
   faLinkedin,
-  faMedium,
-  faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack, Button } from "@chakra-ui/react";
+import { Box, HStack, Button, IconButton, VStack, Collapse, useDisclosure } from "@chakra-ui/react";
 import resumePDF from '../assets/resume.pdf';
 
 const socials = [
@@ -27,6 +25,7 @@ const socials = [
 
 const Header = () => {
   const headerRef = useRef(null);
+  const { isOpen, onToggle, onClose } = useDisclosure();
 
   useEffect(() => {
     let prevScrollPos = window.scrollY;
@@ -37,6 +36,11 @@ const Header = () => {
 
       if (!headerElement) {
         return;
+      }
+
+      // Close the mobile menu when scrolling down
+      if (prevScrollPos < currentScrollPos && isOpen) {
+        onClose();
       }
 
       if (currentScrollPos === 0) {
@@ -57,7 +61,7 @@ const Header = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isOpen, onClose]);
 
   const handleClick = (anchor) => () => {
     const id = `${anchor}-section`;
@@ -67,6 +71,7 @@ const Header = () => {
         behavior: "smooth",
         block: "start",
       });
+      onToggle();
     }
   };
 
@@ -79,28 +84,35 @@ const Header = () => {
       translateY={0}
       transition="transform 0.3s ease-in-out, background-color 0.3s ease-in-out"
       backgroundColor="rgba(0, 0, 0, 0)"
-      // backgroundColor=""
       ref={headerRef}
       zIndex={3}
     >
-      <Box color="white" maxWidth="100%" margin="0 auto">
+      <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
-          px={16}
+          px={{ base: 5, md: 16 }}
           py={4}
-          justifyContent="space-between"
-          alignItems="center"
+          justifyContent={{ base: "none", md: "space-between" }}
         >
           <nav>
-            <HStack spacing={8}>
+            <HStack spacing={8} display={{ base: "none", md: "flex" }}>
               {socials.map((social, index) => (
                 <a key={index} href={social.url} target="_blank" rel="noopener noreferrer">
-                  <FontAwesomeIcon icon={social.icon} size="2x"/>
+                  <FontAwesomeIcon icon={social.icon} size="2x" />
                 </a>
               ))}
             </HStack>
           </nav>
+          <IconButton
+            display={{ base: "block", md: "none" }}
+            aria-label="Open Menu"
+            icon={isOpen ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
+            onClick={onToggle}
+            backgroundColor="transparent"
+            color="white"
+            _hover={{ bg: "transparent" }}
+          />
           <nav>
-            <HStack spacing={8}>
+            <HStack spacing={8} display={{ base: "none", md: "flex" }}>
               <a href="#projects" onClick={handleClick("projects")}>projects</a>
               <a href="#contact-me" onClick={handleClick("contactme")}>contact</a>
               <Button
@@ -117,6 +129,46 @@ const Header = () => {
             </HStack>
           </nav>
         </HStack>
+
+        <Collapse in={isOpen}>
+          <VStack
+            //bg="rgba(51, 51, 51, 0.5)"
+            bg="white"
+            color="#FFABC9"
+            alignItems="center"
+            spacing={6}
+            p={4}
+            mb={5}
+            mx="20px"
+            borderRadius={30}
+            display={{ md: "none" }}
+            transition="opacity 0.2s ease-in-out"
+            style={{ WebkitBoxShadow: "none", MozBoxShadow: "none" }}
+          >
+            <VStack spacing={6} color="#333">
+              <a href="#projects" onClick={handleClick("projects")}>projects</a>
+              <a href="#contact-me" onClick={handleClick("contactme")}>contact</a>
+              <Button
+                as="a"
+                href={resumePDF}
+                target="_blank"
+                rel="noopener noreferrer"
+                bg="#333333"
+                color="white"
+                _hover={{ bg: "#FFABC9" }}
+              >
+                resume
+              </Button>
+            </VStack>
+            <HStack spacing={10} justifyContent="center">
+              {socials.map((social, index) => (
+                <a key={index} href={social.url} target="_blank" rel="noopener noreferrer">
+                  <FontAwesomeIcon icon={social.icon} size="2x" />
+                </a>
+              ))}
+            </HStack>
+          </VStack>
+        </Collapse>
       </Box>
     </Box>
   );
