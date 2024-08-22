@@ -10,7 +10,6 @@ const ProjectsSection = () => {
       backgroundColor="white"
       isDarkBackground
       p={10}
-      
       spacing={20}
     >
       <HStack justifyContent="space-between" width="100%" alignItems="center" mb={8}>

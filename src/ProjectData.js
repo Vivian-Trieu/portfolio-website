@@ -17,7 +17,7 @@ const projects = [
         endDate: "Present",
         title: "CartLink",
         description:
-            "A WordPress web app connecting golf beverage cart drivers, customers, and staff with location tracking to pinpoint where assistance is needed",
+            "A web app connecting golf beverage cart drivers, customers, and staff with location tracking to pinpoint where help is needed",
         skills: ["WordPress", "Figma", "CSS"],
         codeLink: "",
         figmaLink: "https://www.figma.com/design/3rSnNqDKouCVJpWvmIHYiY/Cart-Link-Draft-(Mobile)?node-id=0-1&t=eJRynLA2JhUIA01R-1",
@@ -63,7 +63,7 @@ const projects = [
         category: "Desktop App",
         startDate: "Feb 2023",
         endDate: "May 2023",
-        title: "Restaurant Food Delivery",
+        title: "Delivery Subsystem",
         description:
             "A restaurant food delivery subsystem using a SQL database to manage ordering, management, and delivery processes in one app",
         skills: ["JavaFx", "CSS", "SQL"],

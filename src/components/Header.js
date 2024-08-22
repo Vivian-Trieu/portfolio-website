@@ -64,6 +64,7 @@ const Header = () => {
   }, [isOpen, onClose]);
 
   const handleClick = (anchor) => () => {
+    preventDefault();
     const id = `${anchor}-section`;
     const element = document.getElementById(id);
     if (element) {
@@ -71,8 +72,9 @@ const Header = () => {
         behavior: "smooth",
         block: "start",
       });
-      onToggle();
+      //onToggle();
     }
+    
   };
 
   return (
@@ -130,7 +132,7 @@ const Header = () => {
           </nav>
         </HStack>
 
-        <Collapse in={isOpen}>
+        <Collapse in={isOpen} animateOpacity>
           <VStack
             //bg="rgba(51, 51, 51, 0.5)"
             bg="white"
@@ -143,7 +145,6 @@ const Header = () => {
             borderRadius={30}
             display={{ md: "none" }}
             transition="opacity 0.2s ease-in-out"
-            style={{ WebkitBoxShadow: "none", MozBoxShadow: "none" }}
           >
             <VStack spacing={6} color="#333">
               <a href="#projects" onClick={handleClick("projects")}>projects</a>

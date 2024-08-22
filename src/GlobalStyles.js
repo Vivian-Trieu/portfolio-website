@@ -4,16 +4,14 @@ import hoverCursor from "./assets/hover.cur";
 
 const GlobalStyles = () => (
     <Global
-        styles={{
-            "body": {
-                cursor: `url(${cursor})`, auto,
-                // overflowX: hidden,
-                // touchAction: "pan-x",
-            },
-            "a, button": {
-                cursor: `url(${hoverCursor})`, pointer
+        styles={`
+            body {
+                cursor: url(${cursor}), auto;
             }
-        }}
+            a, button {
+                cursor: url(${hoverCursor}), pointer;
+            }
+        `}
     />
 );
 
