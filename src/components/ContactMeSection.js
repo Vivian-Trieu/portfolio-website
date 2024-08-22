@@ -30,7 +30,7 @@ const LandingSection = () => {
       comment: "",
     },
     onSubmit: async (values) => {
-      await submit("url", values);
+      await submit(values);
     },
     validationSchema: Yup.object({
       firstName: Yup.string().required("Required"),
