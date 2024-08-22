@@ -20,7 +20,7 @@ const projects = [
             "A WordPress web app connecting golf beverage cart drivers, customers, and staff with location tracking to pinpoint where assistance is needed",
         skills: ["WordPress", "Figma", "CSS"],
         codeLink: "",
-        figmaLink: "https://www.figma.com/design/Qsd2VU7kYPljDquYMr7CHE/BroncoBond-UI?node-id=2418-1927&t=l9jVJYk6jy72VskT-1",
+        figmaLink: "https://www.figma.com/design/3rSnNqDKouCVJpWvmIHYiY/Cart-Link-Draft-(Mobile)?node-id=0-1&t=eJRynLA2JhUIA01R-1",
         getImageSrc: () => require("./assets/cartlink.png"),
     },
     {
@@ -59,7 +59,18 @@ const projects = [
         figmaLink: "https://www.figma.com/design/90g4iXwB0lZLTDFs1YHZ7g/ResuMate-UI?node-id=0-1&t=qKfMgr0ObVh2gCSH-1",
         getImageSrc: () => require("./assets/resumate.png"),
     },
-
+    {
+        category: "Desktop App",
+        startDate: "Feb 2023",
+        endDate: "May 2023",
+        title: "Restaurant Food Delivery",
+        description:
+            "A restaurant food delivery subsystem using a SQL database to manage ordering, management, and delivery processes in one app",
+        skills: ["JavaFx", "CSS", "SQL"],
+        codeLink: "https://github.com/EvinMenendezVargas/CS3560-01-6-Restaurant-Food-Delivery-System",
+        figmaLink: "",
+        getImageSrc: () => require("./assets/restaurantdelivery.png"),
+    },
 ];
 
 export default projects;
