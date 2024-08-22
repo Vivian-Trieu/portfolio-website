@@ -15,7 +15,7 @@ const projects = [
         category: "WordPress Web App",
         startDate: "Jul 2023",
         endDate: "Present",
-        title: "CartLink",
+        title: "Cartlink",
         description:
             "A web app connecting golf beverage cart drivers, customers, and staff with location tracking to pinpoint where help is needed",
         skills: ["WordPress", "Figma", "CSS"],
