@@ -10,7 +10,7 @@ const ProjectsSection = () => {
       backgroundColor="white"
       isDarkBackground
       p={10}
-      //alignItems="flex-start"
+      
       spacing={20}
     >
       <HStack justifyContent="space-between" width="100%" alignItems="center" mb={8}>
@@ -25,7 +25,7 @@ const ProjectsSection = () => {
       </HStack>
       <Box
         display="grid"
-        gridTemplateColumns={{ base: "1fr", md: "repeat(3,minmax(0,1fr))"}}
+        gridTemplateColumns={{ base: "1fr", md: "repeat(2,minmax(0,1fr))", lg: "repeat(3,minmax(0,1fr))"}}
         gridGap={8}
       >
         {projects.map((project) => (

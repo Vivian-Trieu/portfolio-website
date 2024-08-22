@@ -55,7 +55,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
         >
           {title}
         </Heading>
-        <Text color="#7C7C7C" fontSize="md" noOfLines={3}>
+        <Text color="#7C7C7C" fontSize="md">
           {description}
         </Text>
         <Wrap spacing={2}>
