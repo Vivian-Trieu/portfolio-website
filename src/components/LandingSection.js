@@ -17,7 +17,7 @@ const LandingSection = () => (
     justifyContent="center"
     alignItems="center"
     isDarkBackground
-    backgroundColor="#FFABC9"
+    //backgroundColor="#FFABC9"
     backgroundImage={background}
     backgroundSize="cover"
     backgroundRepeat="no-repeat"

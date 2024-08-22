@@ -6,8 +6,9 @@ const GlobalStyles = () => (
     <Global
         styles={`
             body {
-                cursor: url(${cursor}), auto;
-                overflow-x: hidden;
+                cursor: url(${cursor}), auto,
+                overflowX: hidden,
+                touchAction: "pan-x",
             }
             a, button {
                 cursor: url(${hoverCursor}), pointer;
