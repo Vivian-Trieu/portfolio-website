@@ -9,12 +9,6 @@ const GlobalStyles = () => (
                 overflowX: "hidden",
                 touchAction: "pan-x",
             },
-            "@viewport": {
-                width: "device-width",
-                initialScale: 1,
-                maximumScale: 1,
-                userScalable: "no"
-            },
             "a, button": {
                 cursor: `url(${hoverCursor}), pointer`,
             }
