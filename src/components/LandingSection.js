@@ -24,9 +24,33 @@ const LandingSection = () => (
     backgroundPosition="center"
   >
     <Box position="relative">
-      <Image src={sparkle} position="absolute" left="-90px" bottom="70px" transform="scaleY(-1)" boxSize="80px"/>
-      <Image src={sparkle} position="absolute" right="560px" top="70px" transform="scaleX(-1)" boxSize="80px"/>
-      <Image src={sparkle} position="absolute" right="30px" bottom="-10px" transform="scaleY(-1) scaleX(-1)" boxSize="80px"/>
+      <Image
+        src={sparkle}
+        position="absolute"
+        left="-90px"
+        bottom="70px"
+        transform="scaleY(-1)"
+        boxSize="80px"
+        display={{ base: "none", lg: "block" }}
+      />
+      <Image
+        src={sparkle}
+        position="absolute"
+        right="560px"
+        top="70px"
+        transform="scaleX(-1)"
+        boxSize="80px"
+        display={{ base: "none", lg: "block" }}
+      />
+      <Image
+        src={sparkle}
+        position="absolute"
+        right="30px"
+        bottom="-10px"
+        transform="scaleY(-1) scaleX(-1)"
+        boxSize="80px"
+        display={{ base: "none", lg: "block" }}
+      />
 
       <HStack
           spacing={{base: "0", md: "15"}}

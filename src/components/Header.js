@@ -91,7 +91,7 @@ const Header = () => {
       width="100vw"
       overflow="auto"
     >
-      <Box color="white" maxWidth="1280px" margin="0 0">
+      <Box color="white" maxWidth="1280px" margin="0 auto">
         <HStack
           px={{ base: 5, md: 16 }}
           py={4}
