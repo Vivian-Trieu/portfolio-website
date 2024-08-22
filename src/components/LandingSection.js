@@ -51,22 +51,24 @@ const LandingSection = () => (
         boxSize="80px"
         display={{ base: "none", lg: "block" }}
       />
-    </Box>
-    <HStack
-          spacing={{base: "0", md: "15"}}
-          padding={{base: "12", md: "20"}}
-          flexDirection={{base: "column", lg: "row"}}
-        >
+
+      <HStack
+        spacing={{ base: "0", md: "15" }}
+        padding={{ base: "6", md: "10" }}
+        flexDirection={{ base: "column", lg: "row" }}
+      >
         <VStack padding={5} spacing={6} alignItems="flex-start" pt={20}>
-          <Text as="i" fontSize={{base: "md", md:"xl"}}>{title}</Text>
-          <Heading as="h1" size={{base: "3xl", md:"3xl"}} >{greeting}</Heading>
-          <Text fontSize={{base: "xl", md:"2xl"}}>{bio}</Text>
+          <Text as="i" fontSize={{ base: "md", md: "xl" }}>{title}</Text>
+          <Heading as="h1" size={{ base: "3xl", md: "3xl" }} >{greeting}</Heading>
+          <Text fontSize={{ base: "xl", md: "2xl" }}>{bio}</Text>
         </VStack>
         <Image
-          width={{base: "md", md: "lg", '2xl': "xl"}}
+          width={{ base: "md", md: "lg", '2xl': "xl" }}
           src={portrait}
         />
       </HStack>
+    </Box>
+
 
   </FullScreenSection>
 );
