@@ -61,11 +61,11 @@ const ContactMeSection = () => {
       py={16}
       spacing={8}
     >
-      <VStack width="100vw" max-width="1280px" alignItems="center">
+      <VStack width="70vw" maxW="800px" alignItems="center">
         <Heading as="h1" id="contactme-section" mb={6}>
           Contact me
         </Heading>
-        <Box rounded="md" >
+        <Box rounded="md" width="100%" >
           <form onSubmit={formik.handleSubmit}>
             <VStack spacing={4}>
               <FormControl isInvalid={formik.touched.firstName && !!formik.errors.firstName}>
