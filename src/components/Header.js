@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { Box, HStack, Button, IconButton, VStack, Collapse, useDisclosure } from "@chakra-ui/react";
 import resumePDF from '../assets/resume.pdf';
+import { Link, useNavigate } from "react-router-dom";
 
 const socials = [
   {
@@ -26,6 +27,7 @@ const socials = [
 const Header = () => {
   const headerRef = useRef(null);
   const { isOpen, onToggle, onClose } = useDisclosure();
+  const navigate = useNavigate();
 
   useEffect(() => {
     let prevScrollPos = window.scrollY;
@@ -64,17 +66,23 @@ const Header = () => {
   }, [isOpen, onClose]);
 
   const handleClick = (anchor) => () => {
-    // preventDefault();
-    const id = `${anchor}-section`;
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-      //onToggle();
-    }
 
+    if(isOpen) {
+      onClose();
+    }
+    navigate("/");
+
+    setTimeout(() => {
+      const id = `${anchor}-section`;
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({
+          behavior: "smooth",
+          block: "start",
+        });
+        //onToggle();
+      }
+    }, 300);
   };
 
   return (
@@ -117,8 +125,9 @@ const Header = () => {
           />
           <nav>
             <HStack spacing={8} display={{ base: "none", md: "flex" }}>
-              <a href="#projects" onClick={handleClick("projects")}>projects</a>
-              <a href="#contact-me" onClick={handleClick("contactme")}>contact</a>
+              <Link to="/">home</Link>
+              <Link to="/all-projects">projects</Link>
+              <a onClick={handleClick("contactme")}>contact</a>
               <Button
                 as="a"
                 href={resumePDF}
@@ -149,8 +158,9 @@ const Header = () => {
             transition="opacity 0.2s ease-in-out"
           >
             <VStack spacing={6} color="#333">
-              <a href="#projects" onClick={handleClick("projects")}>projects</a>
-              <a href="#contact-me" onClick={handleClick("contactme")}>contact</a>
+              <Link to="/">home</Link>
+              <Link to="/all-projects">projects</Link>
+              <a onClick={handleClick("contactme")}>contact</a>
               <Button
                 as="a"
                 href={resumePDF}

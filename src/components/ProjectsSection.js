@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
 
-  
+  const featuredProjects = projects.slice(-6);
   return (
     <FullScreenSection
       backgroundColor="white"
@@ -30,7 +30,7 @@ const ProjectsSection = () => {
         gridTemplateColumns={{ base: "1fr", md: "repeat(2,minmax(0,1fr))", lg: "repeat(3,minmax(0,1fr))"}}
         gridGap={8}
       >
-        {projects.map((project) => (
+        {featuredProjects.map((project) => (
           <Card
             key={project.title}
             category={project.category}
