@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
 
-  const featuredProjects = projects.slice(-6);
+  const featuredProjects = projects.slice(0, 6);
   return (
     <FullScreenSection
       backgroundColor="white"

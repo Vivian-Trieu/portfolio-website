@@ -71,7 +71,6 @@ const projects = [
         figmaLink: "https://www.figma.com/design/90g4iXwB0lZLTDFs1YHZ7g/ResuMate-UI?node-id=0-1&t=qKfMgr0ObVh2gCSH-1",
         getImageSrc: () => require("./assets/resumate.png"),
     },
-    /*
     {
         category: "Desktop App",
         startDate: "Feb 2023",
@@ -84,7 +83,6 @@ const projects = [
         figmaLink: "",
         getImageSrc: () => require("./assets/restaurantdelivery.png"),
     },
-    */
 ];
 
 export default projects;

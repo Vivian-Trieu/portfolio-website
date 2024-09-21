@@ -63,7 +63,7 @@ const ContactMeSection = () => {
     >
       <VStack width="70vw" maxW="800px" alignItems="center">
         <Heading as="h1" id="contactme-section" mb={6}>
-          Contact me
+          contact me
         </Heading>
         <Box rounded="md" width="100%" >
           <form onSubmit={formik.handleSubmit}>
