@@ -1,5 +1,17 @@
 const projects = [
     {
+        category: "Website",
+        startDate: "August 2024",
+        endDate: "Present",
+        title: "lifeshroud",
+        description:
+            "Website for a startup specializing in data removal services from online sources [in progress]",
+        skills: ["Vue.js", "Nuxt.js", "Tailwind CSS", "Figma"],
+        codeLink: "",
+        figmaLink: "https://www.figma.com/design/5rQPp0lVSDLraSIwgC7cEH/Web-Design-Draft?node-id=0-1&t=VwV9QNGXlwEdHnpH-1",
+        getImageSrc: () => require("./assets/lifeshroud.png"),
+    },
+    {
         category: "Mobile App",
         startDate: "Nov 2023",
         endDate: "Present",
@@ -59,6 +71,7 @@ const projects = [
         figmaLink: "https://www.figma.com/design/90g4iXwB0lZLTDFs1YHZ7g/ResuMate-UI?node-id=0-1&t=qKfMgr0ObVh2gCSH-1",
         getImageSrc: () => require("./assets/resumate.png"),
     },
+    /*
     {
         category: "Desktop App",
         startDate: "Feb 2023",
@@ -71,6 +84,7 @@ const projects = [
         figmaLink: "",
         getImageSrc: () => require("./assets/restaurantdelivery.png"),
     },
+    */
 ];
 
 export default projects;

@@ -3,8 +3,11 @@ import FullScreenSection from "./FullScreenSection";
 import { Box, Button, Heading, HStack, Spacer } from "@chakra-ui/react";
 import Card from "./Card";
 import projects from "../ProjectData";
+import { Link } from "react-router-dom";
 
 const ProjectsSection = () => {
+
+  
   return (
     <FullScreenSection
       backgroundColor="white"
@@ -20,7 +23,7 @@ const ProjectsSection = () => {
         >
           featured projects
         </Heading>
-        {/* <Button bg="#FFABC9" _hover={{ bg: "#C3A7E8" }}>view all</Button> */}
+        <Button as={Link} to="/all-projects" bg="#FFABC9" _hover={{ bg: "#C3A7E8" }}>view all</Button>
       </HStack>
       <Box
         display="grid"
