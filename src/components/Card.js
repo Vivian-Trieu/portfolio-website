@@ -2,12 +2,11 @@ import { Tag, Box, Button, Heading, HStack, Image, Text, VStack, Wrap } from "@c
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faFigma } from "@fortawesome/free-brands-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 
-const Card = ({ category, startDate, endDate, title, description, skills, codeLink, figmaLink, imageSrc }) => {
-  // Implement the UI for the Card component according to the instructions.
-  // You should be able to implement the component with the elements imported above.
-  // Feel free to import other UI components from Chakra UI if you wish to.
+const Card = ({ category, startDate, endDate, title, description, skills, codeLink, figmaLink, webLink, imageSrc }) => {
+
   return (
     <Box
       maxW="sm"
@@ -102,6 +101,25 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
               }}
             >
               Figma
+            </Button>
+          )}
+          {webLink && (
+            <Button
+              as="a"
+              href={webLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              color="#FFABC9"
+              variant="link"
+              leftIcon={<FontAwesomeIcon icon={faLink} size="sm" />}
+              _hover={{
+                textDecoration: "underline",
+                textUnderlineOffset: "0.3em",
+                textDecorationThickness: "3px",
+                //color: "#C3A7E8"
+              }}
+            >
+              Link
             </Button>
           )}
         </HStack>

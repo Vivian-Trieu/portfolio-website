@@ -103,6 +103,7 @@ const AllProjectsPage = () => {
                                         imageSrc={project.getImageSrc()}
                                         codeLink={project.codeLink}
                                         figmaLink={project.figmaLink}
+                                        webLink={project.webLink}
                                     />
                                 ))}
                             </Box>
