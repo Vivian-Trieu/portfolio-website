@@ -9,12 +9,10 @@ import AllProjectsPage from "./components/AllProjectsPage";
 import { AlertProvider } from "./context/alertContext";
 import Alert from "./components/Alert";
 import theme from "./theme";
-import GlobalStyles from "./GlobalStyles";
 
 function App() {
   return (
     <ChakraProvider theme={theme}>
-      <GlobalStyles />
       <AlertProvider>
         <Header />
         <Routes>
