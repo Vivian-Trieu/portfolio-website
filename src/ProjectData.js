@@ -24,7 +24,7 @@ const projects = [
         getImageSrc: () => require("./assets/broncobond.png"),
     },
     {
-        category: "WordPress Web App",
+        category: "Web App",
         startDate: "Jul 2023",
         endDate: "Present",
         title: "Cartlink",

@@ -5,6 +5,7 @@ import projects from "../ProjectData";
 import background from "../assets/noisy-gradients-bg.png";
 import Card from "./Card";
 import sparkle from "../assets/sparkle.svg";
+import Footer from "./Footer";
 
 const projectTypes = ["All", "Website", "Mobile App", "Web App"];
 
@@ -25,6 +26,7 @@ const AllProjectsPage = () => {
             // backgroundRepeat="no-repeat"
             // backgroundPosition="center"
             pt={32}
+            pb={12}
             px={{ base: 0, md: 12 }}
         >
             <Box position="relative" pb={12} textAlign="center">
@@ -51,21 +53,26 @@ const AllProjectsPage = () => {
             </Box>
 
             <Tabs onChange={(index) => setSelectedType(projectTypes[index])} variant="unstyled" align="end">
-                <TabList mr={8}>
+                <TabList mr={{base: 0, md: 8}}>
                     {projectTypes.map((type) => (
                         <Tab 
                             key={type}
                             background="transparent"
                             color="white"
                             fontWeight="medium"
+                            fontSize={{ base: "xs", md: "md"}}
                             _selected={{
                                 background: "white",
-                                color: "#333",
-                                fontWeight: "bold",
+                                color: "#FFABC9",
+                                fontWeight: "medium",
+                            }}
+                            _hover={{
+                                background: "#E48DBA",
+                                color: "white",
                             }}
                             roundedTop="xl"
-                            py={3}
-                            px={5}
+                            py={{ base: 2, md: 3}}
+                            px={{ base: 3, md: 5}}
                             mx={1}
                         >
                             {type}
@@ -82,6 +89,7 @@ const AllProjectsPage = () => {
                                 background="white"
                                 p={12}
                                 borderRadius={{ base: "none", md: "xl" }}
+                                boxShadow="lg"
                             >
                                 {filteredProjects.map((project) => (
                                     <Card
