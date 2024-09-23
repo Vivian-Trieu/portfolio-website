@@ -5,7 +5,7 @@ import {
   faGithub,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
-import { Box, HStack, Button, IconButton, VStack, Collapse, useDisclosure } from "@chakra-ui/react";
+import { Box, HStack, Button, IconButton, VStack, Collapse, useDisclosure, textDecoration } from "@chakra-ui/react";
 import resumePDF from '../assets/resume.pdf';
 import { Link, useNavigate } from "react-router-dom";
 

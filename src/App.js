@@ -25,7 +25,6 @@ function App() {
                 <LandingSection />
                 <ProjectsSection />
                 <ContactMeSection />
-                <Footer />
                 <Alert />
               </main>
             }
@@ -36,6 +35,7 @@ function App() {
             element={<AllProjectsPage />}
           />
         </Routes>
+        <Footer />
       </AlertProvider>
     </ChakraProvider>
   );
