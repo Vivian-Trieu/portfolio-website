@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.df6a7eab.css",
-    "main.js": "/portfolio-website/static/js/main.8fd082a7.js",
+    "main.js": "/portfolio-website/static/js/main.8c6c7f07.js",
     "static/js/111.6b7d7cff.chunk.js": "/portfolio-website/static/js/111.6b7d7cff.chunk.js",
     "static/media/noisy-gradients-bg-rotated.png": "/portfolio-website/static/media/noisy-gradients-bg-rotated.9007a505508677d3eb92.png",
     "static/media/noisy-gradients-bg.png": "/portfolio-website/static/media/noisy-gradients-bg.0f4c7e9d364de5222340.png",
     "static/media/lifeshroud.png": "/portfolio-website/static/media/lifeshroud.410d6ecf17460dec2bdc.png",
+    "static/media/luckyshrub.png": "/portfolio-website/static/media/luckyshrub.fd7b232f723915643e64.png",
     "static/media/portrait.svg": "/portfolio-website/static/media/portrait.3789d11bc028c34db2a50d86be35b3db.svg",
     "static/media/portfoliowebsite.png": "/portfolio-website/static/media/portfoliowebsite.513d046bdbd3f32ad2dd.png",
     "static/media/broncobond.png": "/portfolio-website/static/media/broncobond.4668426e0aca844c4649.png",
@@ -21,11 +22,11 @@
     "static/media/sparkle.svg": "/portfolio-website/static/media/sparkle.811f7d3a3aabf6b0927c4ae45e579ccd.svg",
     "index.html": "/portfolio-website/index.html",
     "main.df6a7eab.css.map": "/portfolio-website/static/css/main.df6a7eab.css.map",
-    "main.8fd082a7.js.map": "/portfolio-website/static/js/main.8fd082a7.js.map",
+    "main.8c6c7f07.js.map": "/portfolio-website/static/js/main.8c6c7f07.js.map",
     "111.6b7d7cff.chunk.js.map": "/portfolio-website/static/js/111.6b7d7cff.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df6a7eab.css",
-    "static/js/main.8fd082a7.js"
+    "static/js/main.8c6c7f07.js"
   ]
 }
