@@ -7,13 +7,13 @@ import Card from "./Card";
 import sparkle from "../assets/sparkle.svg";
 import Footer from "./Footer";
 
-const projectTypes = ["All", "Website", "Mobile App", "Web App"];
+const projectTypes = ["all", "website", "mobile app", "web app"];
 
 const AllProjectsPage = () => {
 
-    const [selectedType, setSelectedType] = useState("All");
+    const [selectedType, setSelectedType] = useState("all");
 
-    const filteredProjects = selectedType === "All" ? projects : projects.filter(project => project.category === selectedType);
+    const filteredProjects = selectedType === "all" ? projects : projects.filter(project => project.category === selectedType);
 
     return (
         <FullScreenSection
