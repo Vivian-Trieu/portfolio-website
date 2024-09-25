@@ -34,6 +34,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
             color="#A6A6A6"
             casing="uppercase"
             letterSpacing="0.1em"
+            align="left"
           >
             {category}
           </Text>
@@ -51,6 +52,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
           as='h3'
           size="lg"
           color="#333"
+          align="left"
         >
           {title}
         </Heading>
@@ -80,6 +82,9 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
                 textDecorationThickness: "3px",
                 //color: "#C3A7E8"
               }}
+              _active={{
+                color: "#a881b4"
+              }}
             >
               Code
             </Button>
@@ -99,6 +104,9 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
                 textDecorationThickness: "3px",
                 //color: "#C3A7E8"
               }}
+              _active={{
+                color: "#a881b4"
+              }}
             >
               Figma
             </Button>
@@ -117,6 +125,9 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
                 textUnderlineOffset: "0.3em",
                 textDecorationThickness: "3px",
                 //color: "#C3A7E8"
+              }}
+              _active={{
+                color: "#a881b4"
               }}
             >
               Link
