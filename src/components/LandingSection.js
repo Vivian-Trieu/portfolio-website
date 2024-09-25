@@ -27,8 +27,8 @@ const LandingSection = () => (
       <Image
         src={sparkle}
         position="absolute"
-        left="-90px"
-        bottom="70px"
+        left="-80px"
+        bottom="50px"
         transform="scaleY(-1)"
         boxSize="80px"
         display={{ base: "none", lg: "block" }}
@@ -45,8 +45,8 @@ const LandingSection = () => (
       <Image
         src={sparkle}
         position="absolute"
-        right="30px"
-        bottom="-10px"
+        right="-50px"
+        bottom="-20px"
         transform="scaleY(-1) scaleX(-1)"
         boxSize="80px"
         display={{ base: "none", lg: "block" }}

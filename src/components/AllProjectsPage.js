@@ -55,7 +55,7 @@ const AllProjectsPage = () => {
             <Tabs onChange={(index) => setSelectedType(projectTypes[index])} variant="unstyled" align="end">
                 <TabList mr={{base: 0, md: 8}}>
                     {projectTypes.map((type) => (
-                        <Tab 
+                        <Tab
                             key={type}
                             background="transparent"
                             color="white"
