@@ -34,6 +34,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
             color="#A6A6A6"
             casing="uppercase"
             letterSpacing="0.1em"
+            align="left"
           >
             {category}
           </Text>
