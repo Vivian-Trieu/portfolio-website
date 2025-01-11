@@ -23,7 +23,7 @@ const ProjectsSection = () => {
         >
           featured projects
         </Heading>
-        <Button as={Link} to="/all-projects" color="white" bg="#FFABC9" _hover={{ bg: "#a881b4" }}>view all</Button>
+        <Button as={Link} to="/all-projects" color="white" bg="#FFABC9" _hover={{ bg: "#a2a5df" }}>view all</Button>
       </HStack>
       <Box
         display="grid"

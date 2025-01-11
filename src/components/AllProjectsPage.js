@@ -35,7 +35,7 @@ const AllProjectsPage = () => {
             justifyContent="center"
             alignItems="center"
             isDarkBackground
-            backgroundColor="#bb95cc"
+            backgroundColor="#a2a5df"
             // backgroundImage={background}
             // backgroundSize="cover"
             // backgroundRepeat="no-repeat"
@@ -78,11 +78,11 @@ const AllProjectsPage = () => {
                             fontSize={{ base: "2xs", md: "md" }}
                             _selected={{
                                 background: "white",
-                                color: "#bb95cc",
+                                color: "#a2a5df",
                                 fontWeight: "medium",
                             }}
                             _hover={{
-                                background: "#9b76b5",
+                                background: "#8689dc",
                                 color: "white",
                             }}
                             roundedTop="xl"
