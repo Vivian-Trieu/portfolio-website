@@ -10,7 +10,7 @@ const projects = [
         codeLink: "",
         figmaLink: "https://www.figma.com/design/5rQPp0lVSDLraSIwgC7cEH/Web-Design-Draft?node-id=0-1&t=VwV9QNGXlwEdHnpH-1",
         webLink: "",
-        getImageSrc: () => require("./assets/lifeshroud.png"),
+        getImageSrc: () => require("./assets/dev/lifeshroud.png"),
     },
     {
         category: "Mobile App",
@@ -23,7 +23,7 @@ const projects = [
         codeLink: "https://github.com/BroncoBond/Bronco-Bond",
         figmaLink: "https://www.figma.com/design/Qsd2VU7kYPljDquYMr7CHE/BroncoBond-UI?node-id=2418-1927&t=l9jVJYk6jy72VskT-1",
         webLink: "",
-        getImageSrc: () => require("./assets/broncobond.png"),
+        getImageSrc: () => require("./assets/dev/broncobond.png"),
     },
     {
         category: "Web App",
@@ -36,7 +36,7 @@ const projects = [
         codeLink: "",
         figmaLink: "https://www.figma.com/design/3rSnNqDKouCVJpWvmIHYiY/Cart-Link-Draft-(Mobile)?node-id=0-1&t=eJRynLA2JhUIA01R-1",
         webLink: "",
-        getImageSrc: () => require("./assets/cartlink.png"),
+        getImageSrc: () => require("./assets/dev/cartlink.png"),
     },
     {
         category: "Website",
@@ -49,7 +49,7 @@ const projects = [
         codeLink: "https://github.com/Vivian-Trieu/capstone-project",
         figmaLink: "https://www.figma.com/design/xWezgMh5WXp0uyyZr6a7TG/Little-Lemon-Prototype?node-id=0-1&t=abG2h4IwVEUWL8s6-1",
         webLink: "",
-        getImageSrc: () => require("./assets/littlelemon.png"),
+        getImageSrc: () => require("./assets/dev/littlelemon.png"),
     },
     {
         category: "Website",
@@ -62,7 +62,7 @@ const projects = [
         codeLink: "https://github.com/Vivian-Trieu/portfolio-website",
         figmaLink: "https://www.figma.com/design/p4Gew4hQWS5noHLTJqa1fQ/Portfolio-Wireframe?node-id=0-1&t=Tqpr486MEPKA4Qhq-1",
         webLink: "https://vivian-trieu.github.io/portfolio-website/",
-        getImageSrc: () => require("./assets/portfoliowebsite.png"),
+        getImageSrc: () => require("./assets/dev/portfoliowebsite.png"),
     },
     {
         category: "Web App",
@@ -75,7 +75,7 @@ const projects = [
         codeLink: "https://github.com/Vivian-Trieu/ResuMate",
         figmaLink: "https://www.figma.com/design/90g4iXwB0lZLTDFs1YHZ7g/ResuMate-UI?node-id=0-1&t=qKfMgr0ObVh2gCSH-1",
         webLink: "",
-        getImageSrc: () => require("./assets/resumate.png"),
+        getImageSrc: () => require("./assets/dev/resumate.png"),
     },
     {
         category: "Unity Game",
@@ -88,7 +88,7 @@ const projects = [
         codeLink: "https://github.com/JonahM-coder/Slippery-Escape",
         figmaLink: "",
         webLink: "",
-        getImageSrc: () => require("./assets/slipperyescape.png"),
+        getImageSrc: () => require("./assets/dev/slipperyescape.png"),
     },
     {
         category: "Desktop App",
@@ -101,7 +101,7 @@ const projects = [
         codeLink: "https://github.com/EvinMenendezVargas/CS3560-01-6-Restaurant-Food-Delivery-System",
         figmaLink: "",
         webLink: "",
-        getImageSrc: () => require("./assets/restaurantdelivery.png"),
+        getImageSrc: () => require("./assets/dev/restaurantdelivery.png"),
     },
     {
         category: "Mobile App",
@@ -114,7 +114,7 @@ const projects = [
         codeLink: "https://github.com/Vivian-Trieu/GuidetoGenshin",
         figmaLink: "",
         webLink: "https://viviandtrieu.wixsite.com/guidetogenshin",
-        getImageSrc: () => require("./assets/guidetogenshin.png"),
+        getImageSrc: () => require("./assets/dev/guidetogenshin.png"),
     },
 ];
 

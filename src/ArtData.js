@@ -1,5 +1,10 @@
 const artProjects = [
     {
+        imageSrc: require("./assets/art/pfp.png"),
+        title: "My profile picture",
+        description: "A profile picture portrait of myself that I use for various accounts such as Github and Discord",
+    },
+    {
         imageSrc: require("./assets/art/Valrona.png"),
         title: "Valrona",
         description: "A Tiefling Bard and my first D&D character!",
@@ -27,12 +32,17 @@ const artProjects = [
     {
         imageSrc: require("./assets/art/wheatbread.png"),
         title: "Wheatbread",
-        description: "Character design for a friend's VTuber personality",
+        description: "Character design for a VTuber personality",
     },
     {
-        imageSrc: require("./assets/art/pfp.png"),
-        title: "My profile picture",
-        description: "A profile picture portrait of myself that I use for various accounts such as Github and Discord",
+        imageSrc: require("./assets/art/wheatbread_fancy.png"),
+        title: "Wheatbread (Formal)",
+        description: "Formal outfit design for a VTuber personality",
+    },
+    {
+        imageSrc: require("./assets/art/wheatbread_winter.png"),
+        title: "Wheatbread (Winter)",
+        description: "Winter outfit for a VTuber personality",
     },
 ];
 

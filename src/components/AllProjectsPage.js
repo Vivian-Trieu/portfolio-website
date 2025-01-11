@@ -100,13 +100,14 @@ const AllProjectsPage = () => {
                             {selectedType === "Art Gallery" ? (
                                 // Display art gallery grid
                                 <Box background="white" boxShadow="lg" p={16} pt={10} borderRadius={{ base: "none", sm: "xl" }} >
-                                    <Heading as="h2" size="lg" textAlign="center" mb={8} color="#FFABC9">
-                                            surprise! i also make art
+                                    <Heading as="h2" size="lg" textAlign="center" mb={10} color="#FFABC9">
+                                            surprise! i also love to draw!
                                     </Heading>
                                     <Box
                                         display="grid"
                                         gridTemplateColumns={{ base: "1fr", md: "repeat(2,minmax(0,1fr))", lg: "repeat(3,minmax(0,1fr))" }}
                                         justifyItems="center"
+                                        alignItems="center"
                                         gridGap={8}
                                         width="100%"
                                         // background="white" 
