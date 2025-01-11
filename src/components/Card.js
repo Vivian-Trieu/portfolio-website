@@ -10,7 +10,6 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
   return (
     <Box
       maxW="sm"
-      borderRadius='xl'
       bg="white"
     // cursor="pointer"
     >

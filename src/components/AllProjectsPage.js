@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Image, color } from "@chakra-ui/react";
+import { Box, Heading, Tab, TabList, TabPanel, TabPanels, Tabs, Image, Text } from "@chakra-ui/react";
 import FullScreenSection from "./FullScreenSection";
 import projects from "../ProjectData";
 import background from "../assets/noisy-gradients-bg.png";
@@ -20,8 +20,8 @@ const AllProjectsPage = () => {
         selectedType === "All" ? projects :
             projects.filter(project => project.category === selectedType);
 
-    const handleImageClick = (imageSrc) => {
-        setSelectedImage(imageSrc);
+    const handleImageClick = (project) => {
+        setSelectedImage(project.imageSrc);
         setIsModalOpen(true);
     };
 
@@ -35,16 +35,16 @@ const AllProjectsPage = () => {
             justifyContent="center"
             alignItems="center"
             isDarkBackground
-            backgroundColor="#FFABC9"
+            backgroundColor="#bb95cc"
             // backgroundImage={background}
             // backgroundSize="cover"
             // backgroundRepeat="no-repeat"
             // backgroundPosition="center"
-            pt={32}
+            pt={{ base: 16, md: 32}}
             pb={12}
             px={{ base: 0, md: 12 }}
         >
-            <Box position="relative" pb={12} textAlign="center">
+            <Box position="relative" pb={{base: 6, md: 12}} textAlign="center">
                 <Image
                     src={sparkle}
                     position="absolute"
@@ -63,32 +63,32 @@ const AllProjectsPage = () => {
                     boxSize="40px"
                     display={{ base: "none", md: "block" }}
                 />
-                <Heading as="h1" size={{ base: "3xl", md: "3xl" }}>all projects</Heading>
+                <Heading as="h1" size={{ base: "2xl", md: "3xl" }}>all projects</Heading>
 
             </Box>
 
-            <Tabs onChange={(index) => setSelectedType(projectTypes[index])} variant="unstyled" align="end">
-                <TabList mr={{ base: 0, md: 8 }}>
+            <Tabs onChange={(index) => setSelectedType(projectTypes[index])} variant="unstyled" align="center">
+                <TabList>
                     {projectTypes.map((type) => (
                         <Tab
                             key={type}
                             background="transparent"
                             color="white"
                             fontWeight="medium"
-                            fontSize={{ base: "xs", md: "md" }}
+                            fontSize={{ base: "2xs", md: "md" }}
                             _selected={{
                                 background: "white",
-                                color: "#FFABC9",
+                                color: "#bb95cc",
                                 fontWeight: "medium",
                             }}
                             _hover={{
-                                background: "#E48DBA",
+                                background: "#9b76b5",
                                 color: "white",
                             }}
                             roundedTop="xl"
                             py={{ base: 2, md: 3 }}
                             px={{ base: 3, md: 5 }}
-                            mx={1}
+                            mx={{ base: 0, md: 1}}
                         >
                             {type}
                         </Tab>
@@ -99,22 +99,29 @@ const AllProjectsPage = () => {
                         <TabPanel key={type} p={0}>
                             {selectedType === "Art Gallery" ? (
                                 // Display art gallery grid
-                                <Box
-                                    display="grid"
-                                    gridTemplateColumns={{ base: "1fr", md: "repeat(2,minmax(0,1fr))", lg: "repeat(3,minmax(0,1fr))" }}
-                                    gridGap={8}
-                                    background="white"
-                                    p={12}
-                                    borderRadius={{ base: "none", md: "xl" }}
-                                    boxShadow="lg"
-                                >
-                                    {filteredProjects.map((project, index) => {
-                                        return (
-                                            <Box key={index} cursor="pointer" onClick={() => handleImageClick(project.imageSrc)}>
-                                                <Image src={project.imageSrc} alt={`Art ${index}`} borderRadius={"lg"} />
-                                            </Box>
-                                        );
-                                    })}
+                                <Box background="white" boxShadow="lg" p={16} pt={10} borderRadius={{ base: "none", sm: "xl" }} >
+                                    <Heading as="h2" size="lg" textAlign="center" mb={8} color="#FFABC9">
+                                            surprise! i also make art
+                                    </Heading>
+                                    <Box
+                                        display="grid"
+                                        gridTemplateColumns={{ base: "1fr", md: "repeat(2,minmax(0,1fr))", lg: "repeat(3,minmax(0,1fr))" }}
+                                        justifyItems="center"
+                                        gridGap={8}
+                                        width="100%"
+                                        // background="white" 
+                                        // p={8} 
+                                        // boxShadow="lg" 
+                                        // borderRadius={{ base: "none", sm: "xl" }}
+                                    >
+                                        {filteredProjects.map((project, index) => {
+                                            return (
+                                                <Box key={index} cursor="pointer" onClick={() => handleImageClick(project)}>
+                                                    <Image src={project.imageSrc} maxHeight="350px" alt={`Art ${index}`} borderRadius={"lg"} />
+                                                </Box>
+                                            );
+                                        })}
+                                    </Box>
                                 </Box>
                             ) : (
                                 // Display project cards for all other projects
@@ -124,7 +131,7 @@ const AllProjectsPage = () => {
                                     gridGap={8}
                                     background="white"
                                     p={12}
-                                    borderRadius={{ base: "none", md: "xl" }}
+                                    borderRadius={{ base: "none", sm: "xl" }}
                                     boxShadow="lg"
                                 >
                                     {filteredProjects.map((project) => (
@@ -149,7 +156,13 @@ const AllProjectsPage = () => {
                 </TabPanels>
             </Tabs>
 
-            <ImageModal isOpen={isModalOpen} onClose={handleCloseModal} imageSrc={selectedImage} />
+            <ImageModal 
+                isOpen={isModalOpen} 
+                onClose={handleCloseModal} 
+                imageSrc={selectedImage} 
+                title={filteredProjects.find(project => project.imageSrc === selectedImage)?.title}
+                description={filteredProjects.find(project => project.imageSrc === selectedImage)?.description}
+            />
         </FullScreenSection>
     );
 };
