@@ -29,7 +29,7 @@ const AllProjectsPage = () => {
         setIsModalOpen(false);
         setSelectedImage("");
     }
-
+    
     return (
         <FullScreenSection
             justifyContent="center"

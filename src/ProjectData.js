@@ -1,6 +1,6 @@
 const projects = [
     {
-        category: "Website",
+        category: "website",
         startDate: "August 2024",
         endDate: "Present",
         title: "lifeshroud",
@@ -13,7 +13,7 @@ const projects = [
         getImageSrc: () => require("./assets/dev/lifeshroud.png"),
     },
     {
-        category: "Mobile App",
+        category: "mobile app",
         startDate: "Nov 2023",
         endDate: "Present",
         title: "BroncoBond",
@@ -26,7 +26,7 @@ const projects = [
         getImageSrc: () => require("./assets/dev/broncobond.png"),
     },
     {
-        category: "Web App",
+        category: "web app",
         startDate: "Jul 2023",
         endDate: "Present",
         title: "Cartlink",
@@ -39,7 +39,7 @@ const projects = [
         getImageSrc: () => require("./assets/dev/cartlink.png"),
     },
     {
-        category: "Website",
+        category: "website",
         startDate: "May 2024",
         endDate: "Jul 2024",
         title: "Little Lemon",
@@ -52,7 +52,7 @@ const projects = [
         getImageSrc: () => require("./assets/dev/littlelemon.png"),
     },
     {
-        category: "Website",
+        category: "website",
         startDate: "Jul 2024",
         endDate: "Aug 2024",
         title: "Portfolio Website",
@@ -65,7 +65,20 @@ const projects = [
         getImageSrc: () => require("./assets/dev/portfoliowebsite.png"),
     },
     {
-        category: "Web App",
+        category: "website",
+        startDate: "Apr 2024",
+        endDate: "Apr 2024",
+        title: "Lucky Shrub",
+        description:
+            "Website for fictional landscaping company as a project for Coursera's Meta Front-end Developer Certification",
+        skills: ["CSS", "HTML", "Figma"],
+        codeLink: "https://github.com/Vivian-Trieu/Lucky-Shrub-Home-Page",
+        figmaLink: "https://www.figma.com/design/6r5BsBOtNkE6ddzl2Ws73g/Lucky-Shrub-Website?node-id=0-1&t=A3SRuRKk4yRkO7iO-1",
+        webLink: "",
+        getImageSrc: () => require("./assets/luckyshrub.png"),
+    },
+    {
+        category: "web app",
         startDate: "Sep 2023",
         endDate: "Dec 2023",
         title: "ResuMate",
@@ -78,7 +91,7 @@ const projects = [
         getImageSrc: () => require("./assets/dev/resumate.png"),
     },
     {
-        category: "Unity Game",
+        category: "unity game",
         startDate: "March 2023",
         endDate: "May 2023",
         title: "Slippery Escape",
@@ -91,7 +104,7 @@ const projects = [
         getImageSrc: () => require("./assets/dev/slipperyescape.png"),
     },
     {
-        category: "Desktop App",
+        category: "desktop app",
         startDate: "Feb 2023",
         endDate: "May 2023",
         title: "Delivery Subsystem",
@@ -104,7 +117,7 @@ const projects = [
         getImageSrc: () => require("./assets/dev/restaurantdelivery.png"),
     },
     {
-        category: "Mobile App",
+        category: "mobile app",
         startDate: "Nov 2021",
         endDate: "Dec 2021",
         title: "Guide to Genshin",
