@@ -8,7 +8,7 @@ import sparkle from "../assets/sparkle.svg";
 import ImageModal from "./ImageModal";
 import artProjects from "../ArtData";
 
-const projectTypes = ["All", "Website", "Mobile App", "Web App", "Art Gallery"];
+const projectTypes = ["all", "website", "mobile app", "web app", "art gallery"];
 
 const AllProjectsPage = () => {
 
@@ -16,8 +16,8 @@ const AllProjectsPage = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState("");
 
-    const filteredProjects = selectedType === "Art Gallery" ? artProjects :
-        selectedType === "All" ? projects :
+    const filteredProjects = selectedType === "art gallery" ? artProjects :
+        selectedType === "all" ? projects :
             projects.filter(project => project.category === selectedType);
 
     const handleImageClick = (project) => {
@@ -97,7 +97,7 @@ const AllProjectsPage = () => {
                 <TabPanels>
                     {projectTypes.map((type) => (
                         <TabPanel key={type} p={0}>
-                            {selectedType === "Art Gallery" ? (
+                            {selectedType === "art gallery" ? (
                                 // Display art gallery grid
                                 <Box background="white" boxShadow="lg" p={16} pt={10} borderRadius={{ base: "none", sm: "xl" }} >
                                     <Heading as="h2" size="lg" textAlign="center" mb={10} color="#FFABC9">
