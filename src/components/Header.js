@@ -136,7 +136,6 @@ const Header = () => {
                 bg="#333333"
                 color="white"
                 _hover={{ bg: "#FFABC9" }}
-                _active={{ bg: "#a881b4"}}
               >
                 resume
               </Button>
