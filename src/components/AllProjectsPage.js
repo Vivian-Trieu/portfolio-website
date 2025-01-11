@@ -12,7 +12,7 @@ const projectTypes = ["all", "website", "mobile app", "web app", "art gallery"];
 
 const AllProjectsPage = () => {
 
-    const [selectedType, setSelectedType] = useState("All");
+    const [selectedType, setSelectedType] = useState("all");
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedImage, setSelectedImage] = useState("");
 
