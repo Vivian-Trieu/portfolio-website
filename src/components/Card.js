@@ -22,6 +22,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
       <VStack
         display="flex"
         alignItems="start"
+        justifyItems="start"
         py={6}
         spacing={4}
         color="black"
@@ -51,7 +52,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
           as='h3'
           size="lg"
           color="#333"
-          align="left"
+          textAlign="left"
         >
           {title}
         </Heading>
@@ -65,7 +66,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
             </Tag>
           ))}
         </Wrap>
-        <HStack spacing={6} pt={5}>
+        <HStack spacing={6} pt={5} alignItems="start">
           {codeLink && (
             <Button
               as="a"

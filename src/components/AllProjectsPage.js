@@ -42,7 +42,7 @@ const AllProjectsPage = () => {
             pb={12}
             px={{ base: 0, md: 12 }}
         >
-            <Box position="relative" pb={{base: 6, md: 12}} textAlign="center">
+            <Box position="relative" pb={{base: 6, md: 12}}>
                 <Image
                     src={sparkle}
                     position="absolute"
@@ -61,7 +61,7 @@ const AllProjectsPage = () => {
                     boxSize="40px"
                     display={{ base: "none", md: "block" }}
                 />
-                <Heading as="h1" size={{ base: "2xl", md: "3xl" }}>all projects</Heading>
+                <Heading as="h1" size={{ base: "2xl", md: "3xl" }} align="center">all projects</Heading>
 
             </Box>
 
@@ -98,7 +98,7 @@ const AllProjectsPage = () => {
                             {selectedType === "art gallery" ? (
                                 // Display art gallery grid
                                 <Box background="white" boxShadow="lg" p={16} pt={10} borderRadius={{ base: "none", sm: "xl" }} >
-                                    <Heading as="h2" size="lg" textAlign="center" mb={10} color="#FFABC9">
+                                    <Heading as="h2" size="lg" align="center" mb={10} color="#FFABC9">
                                             surprise! i also love to draw!
                                     </Heading>
                                     <Box
