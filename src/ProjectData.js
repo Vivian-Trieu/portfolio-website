@@ -78,6 +78,19 @@ const projects = [
         getImageSrc: () => require("./assets/dev/resumate.png"),
     },
     {
+        category: "website",
+        startDate: "Apr 2024",
+        endDate: "Apr 2024",
+        title: "Lucky Shrub",
+        description:
+            "Website for fictional landscaping company as a project for Coursera's Meta Front-end Developer Certification",
+        skills: ["CSS", "HTML", "Figma"],
+        codeLink: "https://github.com/Vivian-Trieu/Lucky-Shrub-Home-Page",
+        figmaLink: "https://www.figma.com/design/6r5BsBOtNkE6ddzl2Ws73g/Lucky-Shrub-Website?node-id=0-1&t=A3SRuRKk4yRkO7iO-1",
+        webLink: "",
+        getImageSrc: () => require("./assets/dev/luckyshrub.png"),
+    },
+    {
         category: "unity game",
         startDate: "March 2023",
         endDate: "May 2023",
