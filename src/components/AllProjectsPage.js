@@ -32,8 +32,6 @@ const AllProjectsPage = () => {
     
     return (
         <FullScreenSection
-            justifyContent="center"
-            alignItems="center"
             isDarkBackground
             backgroundColor="#a2a5df"
             // backgroundImage={background}
@@ -108,6 +106,7 @@ const AllProjectsPage = () => {
                                         gridTemplateColumns={{ base: "1fr", md: "repeat(2,minmax(0,1fr))", lg: "repeat(3,minmax(0,1fr))" }}
                                         gridGap={8}
                                         width="100%"
+                                        alignItems="center"
                                         // background="white" 
                                         // p={8} 
                                         // boxShadow="lg" 
@@ -115,8 +114,8 @@ const AllProjectsPage = () => {
                                     >
                                         {filteredProjects.map((project, index) => {
                                             return (
-                                                <Box key={index} cursor="pointer" onClick={() => handleImageClick(project)}>
-                                                    <Image src={project.imageSrc} maxHeight="350px" alt={`Art ${index}`} borderRadius={"lg"} />
+                                                <Box key={index} cursor="pointer" onContextMenu={(e) => e.preventDefault()} onClick={() => handleImageClick(project)}>
+                                                    <Image src={project.imageSrc} maxHeight="350px" alt={`Art ${index}`} borderRadius="lg"  />
                                                 </Box>
                                             );
                                         })}

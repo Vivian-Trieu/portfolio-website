@@ -23,7 +23,7 @@ const ImageModal = ({ isOpen, onClose, imageSrc, title, description }) => {
                     alignItems="center"
                     justifyContent="center"
                 >
-                    <Box width="100%" background="transparent">
+                    <Box width="100%" background="transparent" onContextMenu={(e) => e.preventDefault()}>
                         <Image
                             src={imageSrc}
                             minHeight="400px"
