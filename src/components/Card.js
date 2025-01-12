@@ -82,7 +82,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
                 //color: "#C3A7E8"
               }}
               _active={{
-                color: "#a881b4"
+                color: "#a2a5df"
               }}
             >
               Code
@@ -104,7 +104,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
                 //color: "#C3A7E8"
               }}
               _active={{
-                color: "#a881b4"
+                color: "#a2a5df"
               }}
             >
               Figma
@@ -126,7 +126,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
                 //color: "#C3A7E8"
               }}
               _active={{
-                color: "#a881b4"
+                color: "#a2a5df"
               }}
             >
               Link

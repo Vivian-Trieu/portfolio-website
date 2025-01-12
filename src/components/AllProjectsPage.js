@@ -17,8 +17,8 @@ const AllProjectsPage = () => {
     const [selectedImage, setSelectedImage] = useState("");
 
     const filteredProjects = selectedType === "art gallery" ? artProjects :
-        selectedType === "all" ? projects :
-            projects.filter(project => project.category === selectedType);
+                                                              selectedType === "all" ? projects :
+                                                                                       projects.filter(project => project.category === selectedType);
 
     const handleImageClick = (project) => {
         setSelectedImage(project.imageSrc);
@@ -106,8 +106,6 @@ const AllProjectsPage = () => {
                                     <Box
                                         display="grid"
                                         gridTemplateColumns={{ base: "1fr", md: "repeat(2,minmax(0,1fr))", lg: "repeat(3,minmax(0,1fr))" }}
-                                        justifyItems="center"
-                                        alignItems="center"
                                         gridGap={8}
                                         width="100%"
                                         // background="white" 
