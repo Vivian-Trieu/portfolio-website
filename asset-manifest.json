@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio-website/static/css/main.df6a7eab.css",
-    "main.js": "/portfolio-website/static/js/main.f872c33a.js",
+    "main.js": "/portfolio-website/static/js/main.e48fae50.js",
     "static/js/453.2ddb282f.chunk.js": "/portfolio-website/static/js/453.2ddb282f.chunk.js",
     "static/media/noisy-gradients-bg-rotated.png": "/portfolio-website/static/media/noisy-gradients-bg-rotated.9007a505508677d3eb92.png",
     "static/media/noisy-gradients-bg.png": "/portfolio-website/static/media/noisy-gradients-bg.0f4c7e9d364de5222340.png",
@@ -9,6 +9,7 @@
     "static/media/wheatbread.png": "/portfolio-website/static/media/wheatbread.35a31c215e565fed83b8.png",
     "static/media/lifeshroud.png": "/portfolio-website/static/media/lifeshroud.410d6ecf17460dec2bdc.png",
     "static/media/wheatbread_fancy.png": "/portfolio-website/static/media/wheatbread_fancy.75b1df38cbc39568d430.png",
+    "static/media/luckyshrub.png": "/portfolio-website/static/media/luckyshrub.51a0fefa645dd4078c5c.png",
     "static/media/pfp.png": "/portfolio-website/static/media/pfp.60be2473121dc5635358.png",
     "static/media/Craqinor.png": "/portfolio-website/static/media/Craqinor.aabbad62093b16df528c.png",
     "static/media/Ruko.png": "/portfolio-website/static/media/Ruko.f8f12787cd8f4d55dca8.png",
@@ -30,11 +31,11 @@
     "index.html": "/portfolio-website/index.html",
     "static/media/sparkle.svg": "/portfolio-website/static/media/sparkle.811f7d3a3aabf6b0927c4ae45e579ccd.svg",
     "main.df6a7eab.css.map": "/portfolio-website/static/css/main.df6a7eab.css.map",
-    "main.f872c33a.js.map": "/portfolio-website/static/js/main.f872c33a.js.map",
+    "main.e48fae50.js.map": "/portfolio-website/static/js/main.e48fae50.js.map",
     "453.2ddb282f.chunk.js.map": "/portfolio-website/static/js/453.2ddb282f.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.df6a7eab.css",
-    "static/js/main.f872c33a.js"
+    "static/js/main.e48fae50.js"
   ]
 }
