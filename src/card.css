@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+  .card {
+    align-items: flex-start !important;
+    text-align: left !important;
+    width: 100%;
+  }
+  .card h3,
+  .card p,
+  .card button {
+    text-align: left !important;
+    align-self: flex-start !important;
+  }
+}

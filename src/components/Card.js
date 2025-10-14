@@ -4,6 +4,7 @@ import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { faFigma } from "@fortawesome/free-brands-svg-icons";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
+import '../card.css';
 
 const Card = ({ category, startDate, endDate, title, description, skills, codeLink, figmaLink, webLink, imageSrc }) => {
 
@@ -20,8 +21,8 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
         src={imageSrc}
       />
       <VStack
-        display="flex"
-        alignItems="start"
+        className="card"
+        alignItems="flex-start"
         justifyItems="start"
         py={6}
         spacing={4}
@@ -44,6 +45,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
             color="#A6A6A6"
             casing="uppercase"
             letterSpacing="0.1em"
+            align="right"
           >
             {startDate} - {endDate}
           </Text>
@@ -66,7 +68,7 @@ const Card = ({ category, startDate, endDate, title, description, skills, codeLi
             </Tag>
           ))}
         </Wrap>
-        <HStack spacing={6} pt={5} alignItems="start">
+        <HStack spacing={6} pt={5} alignItems="start" alignSelf="flex-start">
           {codeLink && (
             <Button
               as="a"
